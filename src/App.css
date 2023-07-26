@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Gaegu&display=swap');
+
+
+body{
+  background-color: #F6F6F6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Gaegu', cursive;
+  /* 현재 스크린 실제 크기의 100%를 최소 높이로 가짐 */
+  min-height: 100vh;
+  margin: 0px;
+}
+
+@media (min-width:650px) {
+  .App {
+    width: 640px;
+  }
+}
+
+@media (max-width:650px) {
+  .App {
+    width: 90vw;
+  }
+}
+
+#root {
+  background-color: white;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.App{
+  min-height: 100vh;
+  padding: 0px 20px 0px 20px;
+}
+
+
+/*  My Button  */
+.MyButton {
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-family: 'Gaegu', cursive;
+
+  /* 버튼 안에 글자가 잘려서 두 줄이 되지 않도록 함 */
+  white-space: nowrap;
+}
+
+.MyButton_default {
+  background-color: #ececec;
+  color: black;
+}
+
+.MyButton_positive {
+  background-color: #64c964;
+  color: white;
+}
+
+
+.MyButton_negative {
+  background-color: #fd565f;
+  color: white;
+}
+
+
+
+/*  Header  */
+header {
+  padding: 20px 0px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #e2e2e2;
+}
+
+header > div {
+  display: flex;
+}
+
+header .head_text {
+  width: 50%;
+  font-size: 25px;
+  justify-content: center;
+}
+
+header .head_btn_left{
+  width: 25%;
+  justify-content: start;
+}
+
+header .head_btn_right {
+  width: 25%;
+  justify-content: end;
+}
+
+header button{
+  font-family: 'Gaegu', cursive;
+}
+
+
+/* DiaryList */
+.DiaryList .menu_wrapper {
+  margin: 20px 0px 30px 0px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.DiaryList .menu_wrapper .right_col {
+  flex-grow: 1;
+  /* 남은 넓이를 다 가져감 */
+}
+
+.DiaryList .menu_wrapper .right_col button {
+  width: 100%;
+}
+
+.DiaryList .ControlMenu { 
+  margin-right: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ececec;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-family: 'Gaegu', cursive;
+  font-size: 18px;
+}
+
+
+/* DiaryItem */
+.DiaryItem {
+  padding: 15px 0px;
+  border-bottom: 1px solid #e2e2e2;
+  display: flex;
+  justify-content: space-between;
+}
+
+.DiaryItem .emotion_img_wrapper { 
+  cursor: pointer;
+  min-width: 120px;
+  height: 80px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+}
+
+.DiaryItem .emotion_img_wrapper1{
+  background-color: #64c964;
+}
+
+.DiaryItem .emotion_img_wrapper2{
+  background-color: #9dd77e;
+}
+
+.DiaryItem .emotion_img_wrapper3{
+  background-color: #fdce17;
+}
+
+.DiaryItem .emotion_img_wrapper4{
+  background-color: #fd8446;
+}
+
+.DiaryItem .emotion_img_wrapper5{
+  background-color: #fd565f;
+}
+
+.DiaryItem .emotion_img_wrapper img { 
+  width: 50%;
+}
+
+
+.DiaryItem .info_wrapper { 
+  cursor: pointer;
+  flex-grow: 1;
+  margin-left: 20px;
+}
+
+.DiaryItem .diary_date {
+  font-weight: bold;
+  font-size: 25px;
+  margin-bottom: 5px;
+}
+
+.DiaryItem .diary_content_privew { 
+  font-size: 18px;
+}
+
+.DiaryItem .btn_wrapper{
+  min-width: 70px;
+}
+
+
+/* Diary Editor */
+.DiaryEditor {
+  
+}
+
+.DiaryEditor section { 
+  margin-bottom: 40px;
+}
+
+.DiaryEditor h4{ 
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.DiaryEditor .input_date{ 
+  border: none;
+  border-radius: 5px;
+  background-color: #e2e2e2;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-family: 'Gaegu', cursive;
+}
+
+.DiaryEditor .emotion_list_wrapper { 
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  gap: 2%;
+}
+
+.DiaryEditor textarea {
+  font-family: 'Gaegu', cursive;
+  font-size: 20px;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 200px;
+  resize: vertical;
+  border: none;
+  border-radius: 5px;
+  background-color: #e2e2e2;
+  padding: 20px;
+}
+
+.DiaryEditor .control_box { 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+/* Emotion Item */
+.EmotionItem{
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 20px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.EmotionItem img{
+  width: 50%;
+  margin-bottom: 10px;
+}
+
+.EmotionItem span{
+  font-size: 18px;
+}
+
+.EmotionItem_off {
+  background-color: #e2e2e2;
+}
+
+.EmotionItem_on_1 { 
+  background-color: #64c964;
+  color: white;
+}
+
+.EmotionItem_on_2 { 
+  background-color: #9dd77e;
+  color: white;
+}
+
+.EmotionItem_on_3 { 
+  background-color: #fdce17;
+  color: white;
+}
+
+.EmotionItem_on_4 { 
+  background-color: #fd8446;
+  color: white;
+}
+
+.EmotionItem_on_5 { 
+  background-color: #fd565f;
+  color: white;
+}
+
