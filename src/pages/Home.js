@@ -8,6 +8,11 @@ import { DiaryStateContext } from "../App";
 
 const Home = () => {
 
+    useEffect(()=>{
+        const tilteElement = document.getElementsByTagName('title')[0];
+        tilteElement.innerHTML = `감정일기장`
+    })
+
     const diaryList = useContext(DiaryStateContext);
 
     // 날짜 저장 State
@@ -40,7 +45,10 @@ const Home = () => {
             const lastDay = new Date(
                 curDate.getFullYear(),
                 curDate.getMonth() + 1, 
-                0
+                0,
+                23,
+                59,
+                59
             ).getTime();
 
             setData(diaryList.filter((it)=> firstDay <= it.date && it.date <= lastDay))
